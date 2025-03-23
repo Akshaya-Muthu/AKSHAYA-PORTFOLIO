@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Stack Developer Tools</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="layout"></div>
+    <div class="stars"></div>
+    <!--<div class="circle">
+        <div
+          class="tool"
+          style="top: 0; left: 50%; transform: translateX(-50%)"
+        >
+          <img
+            src="https://tse4.mm.bing.net/th?id=OIP.ZdneYr_e-sDPXF_CIXZEhgHaHa&pid=Api&P=0&h=180"
+            alt="HTML"
+          />
+        </div>
+        <div
+          class="tool"
+          style="top: 20%; left: 90%; transform: translateX(-50%)"
+        >
+          <img
+            src="https://tse1.mm.bing.net/th?id=OIP.d-z24u5dSnc_9p4Gnbf-OAHaHl&pid=Api&P=0&h=180"
+            alt="CSS"
+          />
+        </div>
+        <div
+          class="tool"
+          style="top: 50%; left: 100%; transform: translateX(-50%)"
+        >
+          <img
+            src="https://tse3.mm.bing.net/th?id=OIP.ArDe-tnKfwFt9FHlbrtviwAAAA&pid=Api&P=0&h=180"
+            alt="JavaScript"
+          />
+        </div>
+        <div
+          class="tool"
+          style="top: 80%; left: 90%; transform: translateX(-50%)"
+        >
+          <img
+            src="https://tse4.mm.bing.net/th?id=OIP.-WihZRKnVJ-b2I6xCZHqIgHaEK&pid=Api&P=0&h=180"
+            alt="React"
+          />
+        </div>
+        <div
+          class="tool"
+          style="top: 100%; left: 50%; transform: translateX(-50%)"
+        >
+          <img
+            src="https://tse1.mm.bing.net/th?id=OIP.RvdYZhWIcDsZD7TSquOEegHaEi&pid=Api&P=0&h=180"
+            alt="Node.js"
+          />
+        </div>
+        <div
+          class="tool"
+          style="top: 80%; left: 10%; transform: translateX(-50%)"
+        >
+          <img
+            src="https://tse3.mm.bing.net/th?id=OIP.iWsHU_6Lw7Ss3zTt95gQZgHaD8&pid=Api&P=0&h=180"
+            alt="MongoDB"
+          />
+        </div>
+        <div
+          class="tool"
+          style="top: 50%; left: 0; transform: translateX(-50%)"
+        >
+          <img
+            src="https://tse1.mm.bing.net/th?id=OIP.FeJ5j-A6HL6f8FxQRhDKgAHaHa&pid=Api&P=0&h=180"
+            alt="MySQL"
+          />
+        </div>
+        <div
+          class="tool"
+          style="top: 20%; left: 10%; transform: translateX(-50%)"
+        >
+          <img
+            src="https://tse1.mm.bing.net/th?id=OIP.7fe7SkSNP6Y8PvTRm4Jl6QHaD8&pid=Api&P=0&h=180"
+            alt="Express.js"
+          />
+        </div>
+      </div> !-->
+    <ul class="container">
+      <li class="item">
+        <a href="#0" title="01"
+          ><img
+            src="images/html1.png"
+            alt="01"
+        /></a>
+      </li>
+      <li class="item">
+        <a href="#0" title="02"
+          ><img
+            src="images/css1.png"
+            alt="02"
+        /></a>
+      </li>
+      <li class="item">
+        <a href="#0" title="03"
+          ><img
+            src="images/tailwind1.png"
+            alt="03"
+        /></a>
+      </li>
+      <li class="item">
+        <a href="#0" title="04"
+          ><img
+            src="images/js1.png"
+            alt="04"
+        /></a>
+      </li>
+      <li class="item">
+        <a href="#0" title="05"
+          ><img
+            src="images/react1.png"
+            alt="05"
+        /></a>
+      </li>
+      <li class="item">
+        <a href="#0" title="07"
+          ><img
+            src="images/node1.png"
+            alt="07"
+        /></a>
+      </li>
+      <li class="item">
+        <a href="#0" title="08"
+          ><img
+            src="images/express1.png"
+            alt="08"
+        /></a>
+      </li>
+      <li class="item">
+        <a href="#0" title="08"
+          ><img
+            src="images/mysql1.png"
+            alt="09"
+        /></a>
+      </li>
+      <li class="item">
+        <a href="#0" title="08"
+          ><img
+            src="images/mongodb1.png"
+            alt="10"
+        /></a>
+      </li>
+    </ul>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let starsContainer = document.querySelector(".stars");
+        for (let i = 0; i < 200; i++) {
+          let star = document.createElement("div");
+          let x = Math.random() * window.innerWidth;
+          let y = Math.random() * window.innerHeight;
+          let delay = Math.random() * 3;
+          let duration = 2 + Math.random() * 3;
+          star.style.left = x + "px";
+          star.style.top = y + "px";
+          star.style.animationDelay = delay + "s";
+          star.style.animationDuration = duration + "s";
+          starsContainer.appendChild(star);
+        }
+      });
+      var list = document.querySelectorAll(".item a");
+      for (var i = 0; i < list.length; i++) {
+        var url = list[i].children[0].getAttribute("src");
+        list[i].style.backgroundImage = "url('" + url + "')";
+      }
+    </script>
+  </body>
+</html>
